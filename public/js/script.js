@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function like(e) {
   const button = e.currentTarget
+  
   const like = process.env.LIKES || `http://localhost:3000/${button.id}/like`
   // const user = session.currentUser
   axios
