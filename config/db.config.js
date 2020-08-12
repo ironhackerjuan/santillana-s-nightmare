@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/awesome-project'
+
 
 mongoose
-  .connect('mongodb://localhost/awesome-project', {useNewUrlParser: true})
+  .connect(MONGODB_URI, {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
