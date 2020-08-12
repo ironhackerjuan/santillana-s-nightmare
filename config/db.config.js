@@ -19,6 +19,3 @@ mongoose
     });
   });
 
-//   USERS=https://santillanas-nightmare.herokuapp.com/admin/users
-// PROJECTS=https://santillanas-nightmare.herokuapp.com/admin/projects
-// LIKES=`https://santillanas-nightmare.herokuapp.com/${button.id}/like`

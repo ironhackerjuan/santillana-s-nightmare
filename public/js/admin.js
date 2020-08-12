@@ -1,5 +1,5 @@
 const nameFilter = document.querySelector('.name-filter')
-const usersJson = 'http://localhost:3000/admin/users'
+const usersJson = process.env.USERS || 'http://localhost:3000/admin/users'
 const usersColumn = document.querySelector('#users')
 const nameInput = document.querySelector('#name')
 
@@ -38,7 +38,7 @@ nameFilter.addEventListener('click', () => {
     .catch((err) => console.log('Error while getting the data: ', err))
 })
 const projnameFilter = document.querySelector('.projname-filter')
-const projectsJson = 'http://localhost:3000/admin/projects'
+const projectsJson = process.env.PROJECTS || 'http://localhost:3000/admin/projects'
 const projectsColumn = document.querySelector('#projects')
 const projnameInput = document.querySelector('#projname')
 
