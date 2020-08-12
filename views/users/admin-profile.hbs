@@ -1,0 +1,61 @@
+{{>adminnav}}
+
+<div class="container content">
+  <div class="container">
+    <h1>ADMIN PAGE</h1>
+    <div class="row">
+      <div class="col-6" id="users">
+        <div class="row">
+          <div class="col-12 mt-5 mb-5">
+            <form>
+              <label for="name">Nombre</label>
+              <input name="name" id="name" placeholder="filter by name">
+              <div class="name-filter" style="background-color: red;">Filtrar por nombre</div>
+            </form>
+          </div>
+        </div>
+        {{info}}
+        {{#each users as |user|}}
+        <p>{{user.name}}</p>
+        <form action="/user-profile/{{user._id}}/edit" method="POST">
+          <button type="submit" class="btn btn-primary">Edit</button>
+        </form>
+        <a href="/user-profile/{{user._id}}/delete">Delete</a>
+        {{/each}}
+      </div>
+      <div class="col-6" id="projects">
+        <div class="row">
+          <div class="col-12 mt-5 mb-5">
+            <form>
+              <label for="projname">Nombre</label>
+              <input name="projname" id="projname" placeholder="filter by name">
+              <div class="projname-filter" style="background-color: red;">Filtrar por nombre</div>
+            </form>
+          </div>
+        </div>
+        <form>
+          <p>Filtro por nombre</p>
+        </form>
+        {{#each projects as |project|}}
+        <p>{{project.name}}</p>
+        <form action="/project/{{project._id}}/edit" method="POST">
+          <button type="submit" class="btn btn-primary">Edit</button>
+        </form>
+        <a href="/project/{{project._id}}/delete">Delete</a>
+        {{/each}}
+      </div>
+      <div class="col-12">
+        <h2>Usuarios/Días</h2>
+        <canvas id="my-chart">
+        </canvas>
+        <canvas id="mix-canvas">
+        </canvas>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

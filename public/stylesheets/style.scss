@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+/*
+font-family: 'Baloo Tamma 2', cursive;
+font-family: 'Open Sans', sans-serif;
+*/
+/* Color Theme Swatches in Hex */
+$primary-blue: #04adbf;
+$secondary-blue: #04bfbf;
+$primary-green: #025959;
+$secondary-green: #a0a603;
+$cream: #f2e0c9;
+$white: #fff;
+$text: #333;
+html {
+  font-size: 10px;
+}
+body {
+  font-size: 1.4rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: $text;
+  line-height: 2;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Baloo Tamma 2', cursive;
+  font-weight: 700;
+}
+h1 {
+  color: $secondary-green;
+  font-size: 4rem;
+}
+.navbar {
+  padding: 0;
+  .no-user {
+    padding: 1.5rem 0;
+  }
+  .navbar-nav {
+    flex-direction: row;
+    align-items: center;
+    .bi {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+    .nav-item {
+      margin: 0 2rem;
+    }
+    .user-info {
+      display: flex;
+      align-items: center;
+      margin-right: 2rem;
+      .nav-avatar {
+        border-radius: 50%;
+        border: solid 0.2rem $primary-green;
+        margin-right: 1rem;
+      }
+      p {
+        margin: 0;
+      }
+      strong {
+        margin-right: 2rem;
+      }
+    }
+  }
+  .home {
+    border-left: solid 1px rgba($text, 0.2);
+    margin: 0;
+    padding: 1.5rem 0rem 1.5rem 3rem;
+  }
+  .logout {
+    border-right: solid 1px rgba($text, 0.2);
+    border-left: solid 1px rgba($text, 0.2);
+    margin: 0;
+    padding: 1.5rem 3rem;
+    button {
+      border: 0;
+      background: transparent;
+    }
+  }
+}
+.banner-bg {
+
+  height: 60rem;
+  background: url(../images/banner-bg.jpg) no-repeat center center / cover;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: $white;
+
+  h1{
+    color: $white
+  }
+
+  &:before {
+    width: 100%;
+    height: 100%;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 0.6) 0%,
+      rgba(0, 212, 255, 0.8) 100%
+    );
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  p {
+    margin: 3rem 0;
+  }
+  .btn {
+    color: $white;
+    font-size: 1.6rem;
+    border: solid 0.1rem $white;
+    border-radius: 0.5rem;
+    padding: 1rem 3rem;
+    &:hover {
+      background: $white;
+      color: $text;
+    }
+  }
+}
+.content {
+  .user-avatar {
+    width: 12rem;
+    height: 12rem;
+    border: solid 0.3rem $white;
+    background: $white;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    margin-left: -6rem;
+    top: -8rem;
+  }
+  .comment-block {
+    display: -webkit-box;
+    .home-avatar {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+    }
+    .comment-info {
+      margin-left: 1rem;
+      .card-text {
+        display: block;
+        padding-right: 4rem;
+        line-height: 1.2;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
+      .author {
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: $secondary-blue;
+        margin-bottom: 0;
+      }
+    }
+  }
+  .post-bg {
+    background: url(../images/post-bg.jpg) no-repeat center center / cover;
+    height: calc(100vh - 6.8rem);
+  }
+
+  .profile-bg {
+    background: url(../images/profile.jpg) no-repeat center center / cover;
+    height: calc(100vh - 6.8rem);
+  }
+
+  form {
+    input {
+      padding: 2rem 1rem;
+      font-size: 1.4rem;
+    }
+    label {
+      font-weight: 700;
+    }
+
+    button {
+      background: $secondary-blue;
+      color: $white;
+      font-size: 1.6rem;
+      padding: 1rem 4rem;
+      margin-top: 3rem;
+      box-shadow: 0 0 1rem 0 rgba($text, 0.3);
+      &:hover {
+        background: $white;
+        color: $secondary-blue;
+      }
+    }
+  }
+}
