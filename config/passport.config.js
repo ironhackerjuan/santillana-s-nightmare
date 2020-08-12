@@ -5,6 +5,7 @@ const SlackStrategy = require('passport-slack').Strategy
 const GoogleStrategy = require('passport-google-oauth20').Strategy
 const FacebookStrategy = require('passport-facebook').Strategy
 //SLACK LOG IN
+
 const slack = new SlackStrategy(
   {
     clientID: process.env.SLACK_CLIENT_ID,
