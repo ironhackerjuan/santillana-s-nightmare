@@ -43,8 +43,8 @@ h1 {
     flex-direction: row;
     align-items: center;
     .bi {
-      width: 2.5rem;
-      height: 2.5rem;
+      width: 0.5rem;
+      height: 0.5rem;
     }
     .nav-item {
       margin: 0 2rem;
@@ -124,6 +124,42 @@ h1 {
     }
   }
 }
+
+content {
+  a {
+    text-decoration: none;
+    color: $secondary-green;
+    font-size: 2rem;
+    &:hover {
+      background: $white;
+      color: $secondary-blue;
+    }
+  }
+}
+
+.post-info {
+  border-top: 0.1rem dotted rgba($text, 0.2);
+
+  p {
+    line-height: 1.5rem;
+  }
+}
+
+.info-filter {
+  text-align: center;
+  align-items: center;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  button {
+    margin: 0;
+    line-height: 0;
+  };
+  hr {
+    margin: 0;
+  }
+}
+
 .content {
   .user-avatar {
     width: 12rem;
@@ -197,10 +233,6 @@ h1 {
       background: rgba($secondary-blue, 0.65);
     }
 
-    #projname,
-    #name {
-      position: relative;
-    }
   }
 }
 

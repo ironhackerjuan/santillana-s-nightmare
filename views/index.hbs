@@ -25,9 +25,9 @@
           <div class="card">
             <img src="{{pro.picPath}}" class="card-img-top" alt="{{pro.picName}}">
             <div class="card-body">
-              <a href="/project/{{pro._id}}">{{pro.name}}</a>
+              <content><a href="/project/{{pro._id}}">{{pro.name}}</a></content>
               <p class="card-subtitle mb-2 text-muted">{{date pro.createdAt}}</p>
-              <a href="/login" class="btn btn-sm mb-2 btn-outline-danger">
+              <a href="/login" class="btn btn-sm mb-2 btn-outline-info">
                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart" fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd"
@@ -66,9 +66,9 @@
           <div class="card">
             <img src="{{pro.picPath}}" class="card-img-top" alt="{{pro.picName}}">
             <div class="card-body">
-              <a href="/project/{{pro._id}}">{{pro.name}}</a>
+              <content><a href="/project/{{pro._id}}">{{pro.name}}</a></content>
               <p class="card-subtitle mb-2 text-muted">{{date pro.createdAt}}</p>
-              <button class="btn btn-sm mb-2 btn-outline-danger" id="{{pro._id}}" onclick="like(event)">
+              <button class="btn btn-sm mb-2 btn-outline-info" id="{{pro._id}}" onclick="like(event)">
                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart" fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd"

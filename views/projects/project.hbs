@@ -1,34 +1,24 @@
 <div class="container-fluid content">
   <div class="container">
     <div class="row">
-      <div class="col-12">
-        <p>Project owner: {{project.creatorId.name}}</p>
-        <h1>{{project.name}}</h1>
-        <img src="{{project.picPath}}" alt="{{project.picname}}" width="300">
-        <p>{{project.content}}</p>
-
-        {{#if project.comments}}
-        <h2><strong>Comments</strong></h2>
-        {{/if}}
-
-        {{#each project.comments as |comment|}}
-        <div class="users-comments">
-          {{#if comment.imagePath}}
-          <img src="{{comment.imagePath}}" alt="{{comment.imageName}}" width="100">
-          <h4><strong>{{comment.imageName}}</strong></h4>
-          {{/if}}
-          <div class="post-info">
-            <p>{{comment.content}}</p>
-            <p class="author">posted by @{{comment.authorId.username}}</p>
-          </div>
+      <div class="col-12 row">
+        <h1 class="my-4">{{project.name}} <small><small>Project owner: {{project.creatorId.name}}</small></small></h1>
+        <div class="col-md-8">
+          <img class="img-fluid" src="{{project.picPath}}" alt="{{project.picname}}">
         </div>
-        {{/each}}
+        <div class="col-md-4">
+          <h3 class="my-3">Project Description</h3>
+          <p>{{project.content}}</p>
+        </div>
+      </div>
+    </div>
+    <br>
 
         {{#if user}}
         {{#unless owner}}
         <div class="row justify-content-center">
-          <div class="col-12 col-sm-5">
-            <form action="/project/{{project._id}}" method="POST" enctype="multipart/form-data">
+          <div class="col-12">
+            <form class="col-8" action="/project/{{project._id}}" method="POST" enctype="multipart/form-data">
               <h2><strong>Make a comment!</strong></h2>
               <div class="form-group">
                 <label for="content">Content</label>
@@ -46,9 +36,26 @@
             </form>
           </div>
         </div>
+        <br>
         {{/unless}}
         {{/if}}
 
+        {{#if project.comments}}
+        <h2><small class="mr-4"><strong>{{project.comments.length}}</strong></small><strong>Comments</strong></h2>
+        {{/if}}
+
+        {{#each project.comments as |comment|}}
+        <div class="users-comments">
+          {{#if comment.imagePath}}
+          <img src="{{comment.imagePath}}" alt="{{comment.imageName}}" width="100">
+          <h4><strong>{{comment.imageName}}</strong></h4>
+          {{/if}}
+          <div class="post-info">
+            <p> <small>{{comment.content}}</small></p>
+            <p class="author">posted by @{{comment.authorId.username}}</p>
+          </div>
+        </div>
+        {{/each}}
 
         {{#if owner}}
         <form action="/project/{{project._id}}/edit" method="POST" enctype="multipart/form-data">
