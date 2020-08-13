@@ -62,7 +62,8 @@ const userSchema = new Schema({
   },
   social: {
     slack: String,
-    googleID: String
+    google: String,
+    facebook: String
   }
   }, 
   {

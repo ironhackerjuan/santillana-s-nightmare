@@ -21,6 +21,7 @@ router.get('/auth/slack', routeGuard.isNotAuthenticated, (req, res, next) => {
   passportController(req, res, next)
 })
 
+
 router.get(
   '/auth/google',
   passport.authenticate('google', { scope: ['profile', 'email'] }),

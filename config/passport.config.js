@@ -47,6 +47,7 @@ const google = new GoogleStrategy(
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     callbackURL: '/auth/google/callback'
   },
+  
   (accessToken, refreshToken, profile, next) => {
     User.findOne({ 'social.google': profile.id })
       .then((user) => {
@@ -75,6 +76,7 @@ const google = new GoogleStrategy(
       .catch((err) => next(err))
   }
 )
+
 // FACEBOOK LOG IN
 
 const facebook = new FacebookStrategy(
