@@ -28,7 +28,7 @@ router.get('/', (req, res, next) => {
         // res.json(project.comments)
         res.render('index', {
           project,
-          title: 'Summer project'
+          title: 'Santillanas Nightmare'
         })
       })
       .catch(next)
