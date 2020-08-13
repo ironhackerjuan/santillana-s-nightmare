@@ -179,17 +179,24 @@ h1 {
       font-weight: 700;
     }
 
-    button {
-      background: $secondary-blue;
+    button, .btn-social {
       color: $white;
       font-size: 1.6rem;
       padding: 1rem 4rem;
-      margin-top: 3rem;
+      margin-top: 1rem;
       box-shadow: 0 0 1rem 0 rgba($text, 0.3);
       &:hover {
         background: $white;
         color: $secondary-blue;
       }
     }
+    button {
+      background: $secondary-blue;
+    }
+    .btn-social {
+      background: rgba($secondary-blue, 0.65);
+    }
   }
 }
+
+

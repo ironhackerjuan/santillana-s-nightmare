@@ -206,18 +206,25 @@ h1 {
   font-weight: 700;
 }
 
-.content form button {
-  background: #04bfbf;
+.content form button, .content form .btn-social {
   color: #fff;
   font-size: 1.6rem;
   padding: 1rem 4rem;
-  margin-top: 3rem;
+  margin-top: 1rem;
   -webkit-box-shadow: 0 0 1rem 0 rgba(51, 51, 51, 0.3);
           box-shadow: 0 0 1rem 0 rgba(51, 51, 51, 0.3);
 }
 
-.content form button:hover {
+.content form button:hover, .content form .btn-social:hover {
   background: #fff;
   color: #04bfbf;
+}
+
+.content form button {
+  background: #04bfbf;
+}
+
+.content form .btn-social {
+  background: rgba(4, 191, 191, 0.65);
 }
 /*# sourceMappingURL=style.css.map */
