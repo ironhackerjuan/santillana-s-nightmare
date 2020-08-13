@@ -14,10 +14,10 @@ const transport = nodemailer.createTransport({
     pass: process.env.NM_PASS
   }
 })
-module.exports.sendValidationEmail = (username, email, activationToken) => {
+module.exports.sendValidationEmail = (email, activationToken, name) => {
   transport.sendMail({
     to: email,
-    from: `Santillana's Nightmare team <${username}>`,
+    from: `Santillana's Nightmare team <${user}>`,
     subject: 'Activate your account here!',
 		html: `
 		<head style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
@@ -221,7 +221,7 @@ module.exports.sendValidationEmail = (username, email, activationToken) => {
 										<tbody>
 											<tr style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
 												<td id="heading" class="heading-text" style="padding: 25px 20px 8px 20px;text-align: center;color: #b78846;font-family: 'minion-pro', 'Minion Pro', Georgia, serif;text-transform: uppercase;font-weight: 500;font-size: 42px;line-height: 46px;letter-spacing: 4px;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;">
-												 ${username}
+												 ${name}
 												</td>
 											</tr>
 											<tr style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
