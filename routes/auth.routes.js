@@ -14,10 +14,10 @@ const nodemailer = require('../config/mailer.config')
 //////////////////////////// SIGN UP ///////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 
+
 router.get('/signup', routeGuard.isNotAuthenticated, (req, res) => {
-  const id = req.session.currentUser._id
   if (req.session.currentUser) {
-    res.redirect(`/user-profile/${id}`)
+    res.redirect(`/user-profile/${req.session.currentUser._id}`)
   } else {
   res.render('auth/signup', { title: 'Register here' })
   }
