@@ -1,7 +1,7 @@
 <div class="container-fluid banner-bg">
   <div class="container">
     <div class="row">
-      <div class="col-6">
+      <div class="col-12 col-sm-6">
         <h1>Welcome to Santillana's Nightmare</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet nunc et dui mattis placerat. Praesent
           vel est sed nulla tristique semper a et dolor. Donec placerat, quam ut pharetra ullamcorper, metus purus
@@ -27,7 +27,7 @@
             <div class="card-body">
               <content><a href="/project/{{pro._id}}">{{pro.name}}</a></content>
               <p class="card-subtitle mb-2 text-muted">{{date pro.createdAt}}</p>
-              <a href="/login" class="btn btn-sm mb-2 btn-outline-info">
+              <a href="/login" class="btn btn-sm mb-2 btn-outline-info likes">
                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart" fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd"
@@ -69,7 +69,7 @@
             <div class="card-body">
               <content><a href="/project/{{pro._id}}">{{pro.name}}</a></content>
               <p class="card-subtitle mb-2 text-muted">{{date pro.createdAt}}</p>
-              <button class="btn btn-sm mb-2 btn-outline-info" id="{{pro._id}}" onclick="like(event)">
+              <button class="btn btn-sm mb-2 btn-outline-info likes" id="{{pro._id}}" onclick="like(event)">
                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart" fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd"

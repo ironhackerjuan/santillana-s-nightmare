@@ -10,7 +10,7 @@ html {
 
 body {
   font-size: 1.4rem;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   color: #333;
   line-height: 2;
@@ -22,7 +22,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Baloo Tamma 2', cursive;
+  font-family: "Baloo Tamma 2", cursive;
   font-weight: 700;
 }
 
@@ -123,7 +123,7 @@ h1 {
   background: #020024;
   background: -webkit-gradient(linear, left top, right top, from(rgba(2, 0, 36, 0.6)), to(rgba(0, 212, 255, 0.8)));
   background: linear-gradient(90deg, rgba(2, 0, 36, 0.6) 0%, rgba(0, 212, 255, 0.8) 100%);
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -248,7 +248,8 @@ content a:hover {
   font-weight: 700;
 }
 
-.content form button, .content form .btn-social {
+.content form button,
+.content form .btn-social {
   color: #fff;
   font-size: 1.6rem;
   padding: 1rem 4rem;
@@ -257,7 +258,8 @@ content a:hover {
           box-shadow: 0 0 1rem 0 rgba(51, 51, 51, 0.3);
 }
 
-.content form button:hover, .content form .btn-social:hover {
+.content form button:hover,
+.content form .btn-social:hover {
   background: #fff;
   color: #04bfbf;
 }
@@ -268,5 +270,33 @@ content a:hover {
 
 .content form .btn-social {
   background: rgba(4, 191, 191, 0.65);
+}
+
+@media (max-width: 576px) {
+  .banner-bg {
+    height: 50rem;
+  }
+  .content .card .card-body .likes {
+    font-size: 1.4rem;
+  }
+  .navbar .navbar-nav {
+    display: block;
+  }
+  .navbar .navbar-nav .user-info {
+    padding: 0.5rem 2rem;
+  }
+  .navbar .navbar-nav .user-info .nav-avatar {
+    margin-right: 2rem;
+  }
+  .navbar .navbar-nav .nav-item.home {
+    display: none;
+  }
+  .navbar .navbar-nav .nav-item.logout {
+    border: 0;
+    padding: 0.5rem 0rem;
+  }
+  .navbar .navbar-nav .nav-item.no-user {
+    padding: 0.5rem 4rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;700&family=Open+Sans:wght@400;700&display=swap");
 /*
 font-family: 'Baloo Tamma 2', cursive;
 font-family: 'Open Sans', sans-serif;
@@ -16,7 +16,7 @@ html {
 }
 body {
   font-size: 1.4rem;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   color: $text;
   line-height: 2;
@@ -27,7 +27,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Baloo Tamma 2', cursive;
+  font-family: "Baloo Tamma 2", cursive;
   font-weight: 700;
 }
 h1 {
@@ -83,7 +83,6 @@ h1 {
   }
 }
 .banner-bg {
-
   height: 60rem;
   background: url(../images/banner-bg.jpg) no-repeat center center / cover;
   display: flex;
@@ -91,8 +90,8 @@ h1 {
   position: relative;
   color: $white;
 
-  h1{
-    color: $white
+  h1 {
+    color: $white;
   }
 
   &:before {
@@ -104,7 +103,7 @@ h1 {
       rgba(2, 0, 36, 0.6) 0%,
       rgba(0, 212, 255, 0.8) 100%
     );
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -154,7 +153,7 @@ content {
   button {
     margin: 0;
     line-height: 0;
-  };
+  }
   hr {
     margin: 0;
   }
@@ -215,7 +214,8 @@ content {
       font-weight: 700;
     }
 
-    button, .btn-social {
+    button,
+    .btn-social {
       color: $white;
       font-size: 1.6rem;
       padding: 1rem 4rem;
@@ -232,8 +232,43 @@ content {
     .btn-social {
       background: rgba($secondary-blue, 0.65);
     }
-
   }
 }
 
-
+@media (max-width: 576px) {
+  .banner-bg {
+    height: 50rem;
+  }
+  .content {
+    .card {
+      .card-body {
+        .likes {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+  .navbar {
+    .navbar-nav {
+      display: block;
+      .user-info {
+        padding: 0.5rem 2rem;
+        .nav-avatar {
+          margin-right: 2rem;
+        }
+      }
+      .nav-item {
+        &.home {
+          display: none;
+        }
+        &.logout {
+          border: 0;
+          padding: 0.5rem 0rem;
+        }
+        &.no-user {
+          padding: 0.5rem 4rem;
+        }
+      }
+    }
+  }
+}
