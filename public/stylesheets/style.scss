@@ -235,6 +235,14 @@ content {
   }
 }
 
+.navbar {
+  &.navbar-expand-lg {
+    .navbar-collapse {
+      justify-content: flex-end;
+    }
+  }
+}
+
 @media (max-width: 576px) {
   .banner-bg {
     height: 50rem;
